@@ -3,23 +3,26 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 	<body>
+		<div id="Content">
 
 		<div id="Content-1">
-		Monthly Budget <input type="text" id="Monthly" placeholder="0.00" required>
+		<h1>Monthly Budget </h1><input type="text" id="Monthly" placeholder="0.00" required>
 		<button id="Button-1" onclick="FirstButton()">Next</button>
 	</div>
 
-		<h1>Monthly Budget: </h1>
-		<h1 id="Monthly-Amount"></h1>
+	<h1 id="Monthly-Amount"></h1>
 
 
 			<div id="Content-2">
-		Item <input type="text" id="Item" placeholder="Item" required>
-		Price <input type="text" id="Price" placeholder="Price" required>
+
+
+		<h1>Item: </h1><input type="text" id="Item" placeholder="Item" required>
+		<h1>Price: </h1><input type="text" id="Price" placeholder="Price" required>
 		<button id="Button-2" onclick="SecondButton()">Next</button>
 
 		<h1 id="Item-Price"></h1>
 	</div>
+</div>
 
 
 <script>
@@ -28,8 +31,8 @@
 
 <script>
 function FirstButton() {
-  var x = document.getElementById("Monthly").value;
-  document.getElementById("Monthly-Amount").innerHTML = x;
+  var a = document.getElementById("Monthly").value;
+  document.getElementById("Monthly-Amount").innerHTML = a;
   document.getElementById("Content-2").hidden = false;
   document.getElementById("Content-1").hidden = true;
 }
@@ -38,9 +41,12 @@ function FirstButton() {
 
 <script>
 function SecondButton() {
-  var x = document.getElementById("Item").value;
-  var y = document.getElementById("Price").value;
-  document.getElementById("Item-Price").innerHTML = x + y;
+  var b = document.getElementById("Item").value;
+  var c = document.getElementById("Price").value;
+  document.getElementById("Item-Price").innerHTML = b +' '+ c;
+
+  var d = document.getElementById("Monthly").value;
+  document.getElementById("Monthly-Amount").innerHTML = d - c;
 }
 </script>
 
