@@ -39,17 +39,16 @@ function FirstButton() {
   document.getElementById("Content-2").hidden = false;
   document.getElementById("Content-1").hidden = true;
 }
-</script>
 
-<!-- adds the content-2 inputs together and takes away the price from the total -->
-<script>
+
+//adds the content-2 inputs together and takes away the price from the total //
+
 function SecondButton() {
   var b = document.getElementById("Item").value;
   var c = document.getElementById("Price").value;
-  document.getElementById("Item-Price").innerHTML = b +' '+ c;
+  document.getElementById("Item-Price").innerHTML += b +" "+ "£" + c + "<br>";
 
-  var d = document.getElementById("Monthly").value;
-  document.getElementById("Monthly-Amount").innerHTML = d - c;
+  document.getElementById("Monthly-Amount").innerHTML -=  c;
 }
 </script>
 
